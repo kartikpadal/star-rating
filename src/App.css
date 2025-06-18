@@ -23,7 +23,7 @@ body {
   justify-content: space-between;
 }
 
-/* Horizontal image alignment */
+/* Image row (desktop version) */
 .image-row {
   display: flex;
   justify-content: center;
@@ -74,16 +74,17 @@ body {
 
 /* Texts */
 .rating-text {
-  font-size: px;
+  font-size: 18px;
   color: #222;
   margin-top: 0px;
 } 
 
-h1{
+h1 {
   font-size: 40px;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: rgb(242, 78, 78);
 }
+
 .result-msg {
   font-size: 2rem;
   font-weight: bold;
@@ -101,21 +102,32 @@ h1{
   100% { opacity: 1; transform: scale(1); }
 }
 
-
-/* for mobile screens */
+/* 🌐 Mobile view: horizontal image scroll only on small screens */
 @media (max-width: 600px) {
   .container {
     padding: 15px;
     aspect-ratio: auto;
     min-height: auto;
+    width: 95vw;
   }
 
-  .result-msg {
-    font-size: 1.5rem;
+  .image-row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
   }
 
   .friend-img {
     max-width: 150px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    margin-right: 10px;
+  }
+
+  .result-msg {
+    font-size: 1.5rem;
   }
 
   .star-rating svg {
@@ -123,7 +135,7 @@ h1{
     height: 30px;
   }
 
-  .rating-text{
+  .rating-text {
     font-size: 16px;
   }
 }
