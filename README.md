@@ -1,4 +1,4 @@
-# 😎 Rate My Friend - Prank App
+# Star-rating 
 
 This is a React-based prank app where your friend can rate themselves — and get roasted or hyped with sounds based on their rating.
 
@@ -24,7 +24,6 @@ This is a React-based prank app where your friend can rate themselves — and ge
 
 
 ### 🚀 Live Demo
-[Click here to try it out!](https://your-username.github.io/your-repo-name)  
-> (*Make sure to update this link after deploying!*)
+[Click here to try it out!](https://kartikpadal.github.io/star-rating)  
 
 ---
